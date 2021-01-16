@@ -5,7 +5,6 @@ O projeto foi desenvolvido com embasamento no documento https://gist.github.com/
 Requisitos
 1. docker 
 2. docker-compose
-3. composer
 
 Instalação
 
@@ -17,7 +16,7 @@ Instalação
 $ git clone https://github.com/CarlosKono/devsre.git
 $ cd devsre
 $ cp .env.example .env
-$ composer install
+$ docker run --rm --interactive --tty   --volume "$PWD:/app"   composer install
 $ docker-compose up
 ```
 
