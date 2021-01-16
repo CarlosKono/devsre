@@ -16,7 +16,7 @@ Instalação
 $ git clone https://github.com/CarlosKono/devsre.git
 $ cd devsre
 $ cp .env.example .env
-$ docker run --rm --interactive --tty   --volume "$PWD:/app"   composer install
+$ docker run --rm -v "$(pwd):/app" composer/composer install
 $ docker-compose up
 $ docker-compose exec app php artisan migrate
 ```
