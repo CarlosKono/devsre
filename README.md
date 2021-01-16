@@ -37,3 +37,12 @@ Considerações Aplicação
 
 A aplicação sobe no http://localhost:8080
 
+Fora as rotas
+ /make [POST]
+ /hash/{hash} [GET]
+
+Foi adicionado
+ /list [GET] retorna todas as mensagens utilizar para validação/debug.
+
+ 
+
