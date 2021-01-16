@@ -35,15 +35,7 @@ services:
       MYSQL_DATABASE: devsre
       MYSQL_ROOT_PASSWORD: devsre
     volumes: 
-      - dbdata:/var/lib/mysql   
-
-  composer_installation:
-    container_name: composer_installation
-    image: composer
-    volumes:
-      - ./:/var/www
-    command: composer install --ignore-platform-reqs 
-
+      - dbdata:/var/lib/mysql    
 volumes: 
   dbdata:
     driver: local
