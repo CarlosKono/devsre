@@ -1,24 +1,36 @@
-# Lumen PHP Framework
+# DEV SRE Utilizando Lumen
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+O projeto foi desenvolvido com embasamento no documento https://gist.github.com/jameskennerly-tn/24d196ddf5318fdc3adbafa121b629ca#file-dev-sre-application
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Requisitos
+1. docker 
+2. docker-compose
 
-## Official Documentation
+Instalação
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+1. Clonar o repositório.
+2. Entre na pasta do repositóio
+3. Suba os containers
 
-## Contributing
+```sh
+$ git clone https://github.com/CarlosKono/devsre.git
+$ cd devsre
+$ docker-compose up
+```
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Considerações Docker
 
-## Security Vulnerabilities
+O docker-compose contem 3 imagens:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+1. app onde contem a aplicação em Laravel(Lumen) 8.2.1 e PHP 7.3
+2. webserver onde contem um container com nginx instalado.
+3. db onde contem um container MySQL 5.7 instalado.
 
-## License
+Na estrutura de pastas temos a pasta config onde contem os arquivos de configurações do Nginx e do PHP.
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Na pasta .docker contem o DockerFile dos containers app e webserver.
+
+Considerações Aplicação
+
+A aplicação sobe no http://localhost:8080
+
