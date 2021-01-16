@@ -13,10 +13,13 @@
 |
 */
 
-// $router->get('/', function () use ($router) {
-//     return $router->app->version();
-// });
+ $router->get('/', function () use ($router) {    
+    return response([
+        'app' => config('app.name'),
+        'sucess' => true
+    ]);
+ });
 
 $router->post('/make',['uses' => 'MessageController@store']);
 $router->get('/secret/{hash}',['uses' => 'MessageController@show']);
-$router->get('/',['uses' => 'MessageController@index']);
+$router->get('/list',['uses' => 'MessageController@index']);
