@@ -5,6 +5,7 @@ O projeto foi desenvolvido com embasamento no documento https://gist.github.com/
 Requisitos
 1. docker 
 2. docker-compose
+3. composer
 
 Instalação
 
@@ -15,6 +16,8 @@ Instalação
 ```sh
 $ git clone https://github.com/CarlosKono/devsre.git
 $ cd devsre
+$ cp .env.example .env
+$ composer install
 $ docker-compose up
 ```
 
