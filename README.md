@@ -45,4 +45,14 @@ Foi adicionado
  /list [GET] retorna todas as mensagens utilizar para validação/debug.
 
  
+Na raiz do projeto contém um arquivo "devsre.postman_collection.json" para importar os testes via Postman.
+
+Para realizar o teste das features.
+
+```sh
+$ docker-compose exec app php vendor/bin/phpunit
+```
+
+
+ 
 
