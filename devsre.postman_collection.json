@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "58458f39-cb3b-486b-86b8-75e86532c731",
+		"name": "devsre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "Create Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"asdasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/make",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"make"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Message",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/secret/7aee6a07-fed8-4f5d-a803-af4b9fe898f6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"secret",
+								"7aee6a07-fed8-4f5d-a803-af4b9fe898f6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
