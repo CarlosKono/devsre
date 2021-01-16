@@ -20,4 +20,7 @@ USER www
 # copy files
 COPY --chown=www:www ./ /var/www
 
+RUN composer install --no-dev --prefer-dist --optimize-autoloader && \
+    composer clear-cache
+
 EXPOSE 9000 
